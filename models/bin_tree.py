@@ -80,7 +80,7 @@ class KdTree(BinTree):
         if to_add:
             dots.append(node.data)
 
-        intersection = left <= coord <= right        
+        intersection = left <= coord <= right
         self.search_list.append((node.data, to_add, intersection))
 
         if node.left and left < coord:

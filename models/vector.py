@@ -57,3 +57,6 @@ class Vector:
 
     def cross_product_with(self, other):
         return self.x * other.y - other.x * self.y
+
+    def dot_product_with(self, other):
+        return self.x * other.x + self.y * other.y
