@@ -101,8 +101,6 @@ class VoronoiDiagram:
             print(left_site, right_site)
             self.edges.append(edge)
             edge, left_site, right_site = compute_next_edge(edge, left_site, right_site)
-        
-        print(self.edges)
 
     def clean(self):
         new_left_edges = []
@@ -127,7 +125,6 @@ class VoronoiDiagram:
         self.right.edges = new_right_edges
         self.edges += self.left.edges
         self.edges += self.right.edges
-        print(self.edges)
 
     def __str__(self):
         name = 'sites:'
@@ -194,7 +191,7 @@ def find_intersection_point(breach, edge):
             edge_start_point = edge.start_point
 
             first = Vector([edge_end_point.x - edge_start_point.x, edge_end_point.y - edge_start_point.y])
-            second = Vector([x - edge_start_point.x, y - edge_end_point.y])
+            second = Vector([x - edge_start_point.x, y - edge_start_point.y])
 
             first.normalize()
             second.normalize()
